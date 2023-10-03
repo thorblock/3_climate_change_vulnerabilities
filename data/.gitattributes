@@ -1,1 +1,4 @@
 C:/Users/Thor/Desktop/Class2/3_climate_change_vulnerabilities/data/ZIP_Codes_Portland.geojson filter=lfs diff=lfs merge=lfs -text
+.geojson filter=lfs diff=lfs merge=lfs -text
+Street_Tree.geojson filter=lfs diff=lfs merge=lfs -text
+Street_Trees.geojson filter=lfs diff=lfs merge=lfs -text
