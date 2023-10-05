@@ -1,0 +1,36 @@
+{"names":["97229", "97210", "97233"],
+"metadata":[{  
+    "names": 97229, 
+    "AMI": "$137,006",  "Studio": "$1350",
+  "Bedroom1": "$1645",
+  "Bedroom2": "$1778",
+  "Bedroom3": "$1983",
+ "Bedroom4": "$2380",
+  "Bedroom5": "$2737",
+  "Bedroom6": "$3148",
+  "Bedroom7": "$3620"
+},
+{
+  "names": 97210,
+  "AMI": "$79,387",
+  "Studio": "$1350",
+  "Bedroom1": "$1645",
+  "Bedroom2": "$1778",
+  "Bedroom3": "$1983",
+ "Bedroom4": "$2380",
+  "Bedroom5": "$2737",
+  "Bedroom6": "$3148",
+  "Bedroom7": "$3620"
+},
+{
+  "names": 97233,
+  "AMI": "$48360",
+  "Studio": "$1016",
+  "Bedroom1": "$1035",
+  "Bedroom2": "$1111",
+  "Bedroom3": "$1366",
+  "Bedroom4": "$1639",
+  "Bedroom5": "$1885",
+  "Bedroom6": "$2168",
+  "Bedroom7": "$2493"
+}]}
