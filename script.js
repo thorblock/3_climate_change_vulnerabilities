@@ -1,28 +1,63 @@
 // I stole this from Christina
-// function to load the geojson file
-let geojsonData; // Declare a variable to store GeoJSON data
-
-fetch('data/dashboard_set.geojson') // Replace with your GeoJSON file path
+// geoJSON load
+let geojsonData; 
+fetch('data/dashboard_set.geojson') 
     .then(response => response.json())
     .then(data => {
-        // Assign the GeoJSON data to the variable
         geojsonData = data;
-
-        // Create a Leaflet map
-        const map = L.map('map').setView([0, 0], 2);
-
-        // Add a base map (e.g., OpenStreetMap)
+        const map = L.map('map').setView([45.5230, -122.6764], 11);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-        // Create a GeoJSON layer and add it to the map
         L.geoJSON(geojsonData).addTo(map);
-
-        // You can now reference the geojsonData variable as needed
         console.log(geojsonData);
     })
     .catch(error => {
-        console.error('Error loading GeoJSON:', error);
+        console.error('something went wrong', error);
     });
+
+// array time
+// zipcode
+const zipcode = [];
+// race composition
+const hispanic = [];
+const white = [];
+const black = [];
+const native = [];
+const asian = [];
+const nhpi = [];
+const other = [];
+// yearly income brackets
+const lessthan5k = [];
+const fivek10k = [];
+const tenk15k = [];
+const fifteenk20k = [];
+const twentyk25k = [];
+const twentyfivek35k = [];
+const thirtyfivek50k = [];
+const fiftyk75k = [];
+const sevenfivek100k = [];
+const hundredk150k = [];
+const onefiftykplus = [];
+// median hhld inc, supp security inc, pubassist/snap inc
+const medianhhld = [];
+const suppsec = [];
+const pubassist = [];
+// education attainment
+const lessthanhigh = [];
+const highorged = [];
+const associateorsomecollege = [];
+const bachorhigher = [];
+// population
+const population = [];
+
+// loop through geojson features
+for (const feat of geojsonData.features) {
+    // consider var placeholder
+    const raceComp = Feature.properties.race_comp;
+    const incomeBrackets = 
+    // split and push 
+}
+
+
 
 
 
