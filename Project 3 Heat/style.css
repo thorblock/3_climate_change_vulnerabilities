@@ -1,0 +1,55 @@
+body {
+    font-family: Noto Sans, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.chart-container {
+    margin-top: 20px;
+}
+
+.dropdown-container {
+    margin-bottom: 20px;
+}
+
+#zip-codes {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+h1 {
+    color: #333;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #F0FFF0, #F5FFFA);
+}
+
+.content-box {
+    width: 800px;
+    margin: 0 auto;
+    border: 2px solid #000; /* Adds a black border around the content */
+    padding: 20px; /* Adds padding inside the border */
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.footer {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    border: 2px solid #000;
+}
+
+.footer-content {
+    margin: 10px;
+}
