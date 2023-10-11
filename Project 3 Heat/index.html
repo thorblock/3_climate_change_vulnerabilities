@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Tree Canopy and Heat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="content-box">
+        <div class="header">Heat Problem</div>
+    <p>In addition to aesthetics, heat reduction is a main point of trees in cities. As the climate warms, keeping cities cool will be a major factor in human health. Tree cover can be a way to help those who must be outside in the heat to stave off heat-related illness and death. Trees can also dramatically reduce cooling costs when placed properly.</p>
+
+    <p>Unfortunately, tree coverage isn’t equally distributed. Historically, areas with a higher concentration of poor and minority residents typically have less tree cover. People in those communities often must walk or take public transportation, leading to greater heat and sun exposure. Often lower income households must choose between cooling costs and other essentials.</p>
+    </div>
+    <div class="container">
+        <h2>Heat Profile Through the Day</h2>
+        <div class="dropdown-container">
+            <label for="zip-codes">Select a ZIP code:</label>
+            <select id="zip-codes">
+                <option value="-" selected>None</option> <!-- Add the "None" option with the selected attribute -->
+            </select>
+        </div>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <img src="Tree Canopy Coverage.png" alt="97229: 48.7%, 97210: 8.0%, 97233: 5.8%">
+        <!-- Add a heading for the stacked line chart -->
+        <h2>Compare Temperatures</h2>
+        <!-- Create a canvas for the stacked line chart -->
+        <canvas id="lineChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="app.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+        Sources:
+        <br>
+        NOAA: https://hub.arcgis.com/datasets/esri::u-s-urban-heat-island-mapping-campaign/about
+        <br>
+        USDA: https://data-usfs.hub.arcgis.com/documents/usfs::usfs-cartographic-2016-tree-canopy-cover-conus-map-service/explore
+    </footer>
+</body>
+</html>
