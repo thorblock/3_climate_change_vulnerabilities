@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     <title>Portland Zipcode Data Visualization</title>
+   
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- libraries -->
-    <script src="https://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/leaflet.esri.geocoder/1.0.2/esri-leaflet-geocoder.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/alasql/0.1/alasql.min.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+    <!-- D3 library -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-
+  
     <div class="container">
       <div class="row">
         <div class="col-md-12 jumbotron text-center">
@@ -26,8 +36,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="panel-heading">
-          <div class="panel-heading">
+        <div class="col-md-2">
+          <div class="well">
             <label for="zipCodeSelect">Select ZIP Code:</label>
             <select id="zipCodeSelect">
                 <option value="97210">97210</option>
@@ -36,54 +46,20 @@
             </select>
           </div>
         </div>
-        <div class="chart-container">
-          <canvas id="racePieChart"></canvas>
-        </div>
-        <div class="chart-container">
-          <div id="incomeBarChart"></div>
-        </div>
       </div>
-      <div class="row">
-        <div class="chart-container">
-          <div id="educationAttainmentBarChart"></div>
-        </div>
+      <div class="map-container">
+        <div id="map" class="map"></div>
       </div>
-      <div class="row">
-        <div class="map-container">
-          <div id="heatMapNotation"></div>
-        </div>
+      <div class="charts-container">
+        <div id="pie" class="chart"></div>
+        <div id="barIncome" class="chart"></div>
+    </div>
+
       </div>
     </div>
+
   
-    <script>
-        // JavaScript code to handle chart creation and ZIP code selection
-        const zipCodeSelect = document.getElementById('zipCodeSelect');
-
-        // Create chart instances here, e.g., chart1, chart2, chart3
-
-        // Function to update charts based on selected ZIP code
-        function updateCharts(selectedZipCode) {
-            // Implement logic to fetch data for the selected ZIP code
-            // Update chart datasets with the new data
-
-            // Example:
-            // const newData = getChartDataForZipCode(selectedZipCode);
-            // chart1.data.datasets[0].data = newData;
-            // chart1.update();
-            // Repeat for other charts (chart2, chart3)
-        }
-
-        // Event listener for ZIP code selection
-        zipCodeSelect.addEventListener('change', function () {
-            const selectedZipCode = zipCodeSelect.value;
-            updateCharts(selectedZipCode);
-        });
-
-        // Call updateCharts with the default ZIP code (e.g., '97210') on page load
-        updateCharts('97210');
-    </script>
-
-    <script src="script2.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

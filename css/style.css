@@ -1,0 +1,33 @@
+
+
+.map {
+    width: 50%;
+    height: 500px;
+    position: absolute;
+}
+
+
+
+/* Individual chart */
+.chart {
+    width: 50%;
+    height: 500px; /* Adjust the height as needed */
+}
+
+/* Container for the map */
+.map-container {
+    float: left; /* Float the map container to the left */
+    width: 50%;  /* Adjust the width as needed */
+    background-color: white; /* Add background color to the map container */
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in the container's width */
+}
+
+/* Container for the plots */
+.plots-container {
+    float: left; /* Float the plots container to the left */
+    width: 50%;  /* Adjust the width as needed */
+    background-color: white; /* Add background color to the plots container */
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in the container's width */
+}
